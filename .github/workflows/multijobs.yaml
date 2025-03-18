@@ -42,7 +42,7 @@ jobs:
           Get-ExecutionPolicy
 
       - name: Step 6 - List Windows environment variables
-        run: Get-ChildItem Env
+        run: 'Get-ChildItem Env:'
 
   # This job runs on an Ubuntu runner
   build-ubuntu:
