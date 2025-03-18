@@ -23,8 +23,27 @@ jobs:
   # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
 
-      - name: Steap 1 - Log the pre-build disc space
+      - name: Step 1 - Log the pre-build disc space
         run: ls
+
+      - name: Step 2 - BCheckout the main Github branch
+        uses: action/checkout@v4
+      
+      - name: Step 3 - Set up JDK 21 
+        uses: actions/java@v4
+        with:
+          java-version: '21'
+          distribution: 'microsoft'
+
+      - name: Step 4 - Build your Jakarta we app with Maven
+        run: echo "mvn -B pacage --file pom.xml"
+
+      - name: "Step 5 - Check windows ExecutionPolicy:"
+        run: |
+          echo Here is The widows Execution policy
+          Get-ExecutionPolicy
+      - name: Step 6 - Kust windows environment variables
+        run: env
       
 
   
