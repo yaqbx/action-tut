@@ -30,9 +30,11 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Step 3 Setup JDK
-        uses: actions/setup-java@1
+        uses: actions/setup-java@4
         with:
-          java-version: 17
+          java-version: '17'
+          distribution: 'temurin'
+          
 
       - name: Step 4 - Build your jacarta web app with Maven
         run: echo mvn -B package --file pom.xml
