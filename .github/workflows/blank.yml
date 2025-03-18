@@ -32,13 +32,21 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          echo "What is in dir"
+          echo 1. What is in the directory
           ls -a
           echo
-          echo "is git installed?"
-          git --version
+          echo 2. Is java installed
+          java -version
           echo
-          echo "what about build tools?"
-          mvn --version
+          echo 3. Disk space
+          df -h
+          echo
+          echo 4. Display environment for user
+          env
+          echo
+          echo 5. Whoami
+          whoami
+          echo 6. $ANDROID_SDK_ROOT
+          
     
           
