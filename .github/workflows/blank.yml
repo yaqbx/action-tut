@@ -26,27 +26,14 @@ jobs:
       - uses: actions/checkout@v4
 
       # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
+      - name: Run BASH script
+        run: sh ./github-action-script.sh
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          echo 1. What is in the directory
+          echo: what is in folder
           ls -a
-          echo
-          echo 2. Is java installed
-          java -version
-          echo
-          echo 3. Disk space
-          df -h
-          echo
-          echo 4. Display environment for user
-          env
-          echo
-          echo 5. Whoami
-          whoami
-          echo 6. $ANDROID_SDK_ROOT
           
     
           
