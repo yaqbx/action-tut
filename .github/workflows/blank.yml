@@ -35,9 +35,6 @@ jobs:
           echo "What is in dir"
           ls -a
           echo
-          echo "is java installed"
-          java --verison
-          echo
           echo "is git installed?"
           git --version
           echo
